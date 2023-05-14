@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_project/home_page.dart';
+import 'package:my_first_project/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // return const Placeholder();
-    int days = 90;
-    String name = 'Roshan';
+    // int days = 90;
+    // String name = 'Roshan';
 //     double pi = 3.14;
 //     bool isMale = true;
 //     num temp = 30.5;
@@ -20,6 +20,14 @@ class MyApp extends StatelessWidget {
 //     var day = 'Sunday';
 //     const pi = 3.14;   // list can not be modified
 // final //List can be modified
-    return MaterialApp(home: HomePage());
+    return MaterialApp(
+      home: HomePage(),
+      // theme: ThemeData.dark()
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(
+          // brightness: Brightness.dark,
+          primarySwatch: Colors.pink),
+    );
   }
 }
